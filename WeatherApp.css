@@ -1,5 +1,17 @@
 
 
 .container {
-    border: 10px solid black;
+    border: 1px solid black;
+    margin: auto;
+}
+
+header {
+    font-family: 'Shrikhand', cursive;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+h3 {
+    border: 1px solid red;
 }
