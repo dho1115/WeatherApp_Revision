@@ -1,5 +1,16 @@
 
 
+.center {
+    text-align: center;
+} 
+
+.circle {
+    border: 1px solid black;
+    border-radius: 360px;
+    height: 25vw;
+    width: 25vw;
+    padding: auto;
+}
 .container {
     border: 1px solid black;
     margin: auto;
@@ -14,4 +25,8 @@ header {
 
 h3 {
     border: 1px solid red;
+}
+
+.temp {
+    margin: auto;   
 }
