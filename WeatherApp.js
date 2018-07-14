@@ -5,10 +5,12 @@ let circle = document.querySelector(".circle");
 let tempNumber = parseInt(temp.textContent);
 let input = document.querySelector("input");
 
-let defaultLocation = "Chicago,IL";
+var defaultLocation = "Chicago,IL";
 
 function NewLocation() {
     defaultLocation = input;
+    alert(input.value);
+    console.log(input.value);
     return defaultLocation;
 } 
 
@@ -19,14 +21,17 @@ $.getJSON
 {$("#place").text(jsonData.query.results.channel.item.title);
 
 console.log("CONDITION(S): ",jsonData.query.results.channel.item.condition);
-
+$("#weather").text(jsonData.query.results.channel.item.condition.text);
 $("#date").text(jsonData.query.results.channel.item.condition.date);
 $(".temp").text(jsonData.query.results.channel.item.condition.temp);
+
 tempColor(tempNumber);
 
 console.log("WIND CHILL:  ",jsonData.query.results.channel.wind.chill);
+$("#windchill").text(jsonData.query.results.channel.wind.chill);
 
 console.log("WINDSPEED: ",jsonData.query.results.channel.wind.speed);
+$("#windspeed").text(jsonData.query.results.channel.wind.speed);
 
 console.log("WIND DIRECTION: ",jsonData.query.results.channel.wind.direction);
 });
